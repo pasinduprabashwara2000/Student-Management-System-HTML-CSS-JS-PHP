@@ -1,0 +1,77 @@
+body {
+	margin: 0;
+	padding: 0;
+	font-family: Arial, Helvetica, sans-serif;
+	background: linear-gradient(135deg, #4facfe, #00f2fe);
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+/* Login container */
+.container {
+	width: 100%;
+	max-width: 400px;
+	background: #ffffff;
+	padding: 30px;
+	border-radius: 12px;
+	box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Title */
+.title {
+	text-align: center;
+	margin-bottom: 20px;
+	font-size: 28px;
+	font-weight: bold;
+	color: #333;
+}
+
+/* Form spacing */
+.form-group {
+	margin-bottom: 15px;
+}
+
+/* Labels */
+label {
+	font-weight: 600;
+	margin-bottom: 5px;
+	display: inline-block;
+}
+
+/* Inputs */
+.form-control {
+	border-radius: 8px;
+	padding: 10px;
+	border: 1px solid #ccc;
+	transition: 0.3s;
+}
+
+.form-control:focus {
+	border-color: #4facfe;
+	box-shadow: 0 0 5px rgba(79, 172, 254, 0.5);
+}
+
+/* Button */
+.btn-primary {
+	width: 100%;
+	padding: 10px;
+	border-radius: 8px;
+	background: #4facfe;
+	border: none;
+	font-weight: bold;
+	transition: 0.3s;
+}
+
+.btn-primary:hover {
+	background: #007bff;
+}
+
+/* Message */
+h3 {
+	text-align: center;
+	color: red;
+	margin-bottom: 15px;
+}
+
