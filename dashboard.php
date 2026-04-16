@@ -1,3 +1,16 @@
+<?php 
+
+include 'DBConnection.php';
+
+$students = $conn->query("SELECT COUNT(*) AS total_students FROM students");
+$totalStudents = $students->fetch_assoc()['total_students']; 
+
+
+$course = $conn->query("SELECT COUNT(*) AS total_courses FROM course");
+$totalCourses = $course->fetch_assoc()['total_courses'];
+
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -24,13 +37,13 @@
 
     <!-- Sidebar -->
     <div class="col-md-2 sidebar">
-        <a href="dashboard.php">🏠 Dashboard</a>
-        <a href="pages/ManageStudents.php">👨‍🎓 Manage Students</a>
-        <a href="pages/ManageCourses.php">📚 Manage Courses</a>
-        <a href="#">📝 Manage Exams</a>
-        <a href="#">📊 Manage Reports</a>
-        <a href="#">⚙ Settings</a>
-        <a href="logout.php">🚪 Logout</a>
+        <a href="dashboard.php">Dashboard</a>
+        <a href="ManageStudents.php">Manage Students</a>
+        <a href="ManageCourses.php">Manage Courses</a>
+        <a href="#">Manage Exams</a>
+        <a href="#">Manage Reports</a>
+        <a href="#">Settings</a>
+        <a href="logout.php">Logout</a>
     </div>
 
         <!-- Main Content -->
@@ -44,7 +57,7 @@
                     <div class="card text-white bg-primary card-box">
                         <div class="card-body">
                             <h5>Total Students</h5>
-                            <h2>120</h2>
+                            <h2><?php echo $totalStudents; ?></h2>
                         </div>
                     </div>
                 </div>
@@ -53,7 +66,7 @@
                     <div class="card text-white bg-success card-box">
                         <div class="card-body">
                             <h5>Active Courses</h5>
-                            <h2>8</h2>
+                            <h2><?php echo $totalCourses; ?></h2>
                         </div>
                     </div>
                 </div>
